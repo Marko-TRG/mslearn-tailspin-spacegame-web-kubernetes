@@ -11,12 +11,16 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
+  buildConfiguration: 'Release'
+  leaderboardRepository: 'leaderboard'
+  webRepository: 'web'
   dockerRegistryServiceConnection: '9c45e5cf-f847-4409-8b85-940600631b0e'
   imageRepository: 'markotrgmslearntailspinspacegamewebkubernetes'
   containerRegistry: 'tailspinspacegame10000.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'tailspinspacegame10000b2a8-auth'
+  #imagePullSecret: 'tailspinspacegame10000b2a8-auth'
+  imagePullSecret: 'secret'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
